@@ -5,3 +5,7 @@ Packs:
   Main:
     MAIN: 2
     MAIN_HASH: 411e35e02490f52a6c56aec43b47c442cba10000
+
+  SOT:
+    SOT: 
+    SOT_HASH: 411e35e02490f52a6c56aec43b47c442cba10000

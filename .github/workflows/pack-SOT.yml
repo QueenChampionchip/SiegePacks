@@ -1,0 +1,92 @@
+name: SOT Pack
+
+on:
+  workflow_dispatch:
+
+concurrency:
+  group: SOT-pack
+  cancel-in-progress: true
+
+jobs:
+  build:
+    name: Build SOT Pack
+    runs-on: ubuntu-latest
+    outputs:
+      NEXT_VERSION: ${{ steps.get_version.outputs.NEXT_VERSION }}
+      EVENT_NUM: ${{ steps.get_version.outputs.EVENT_NUM }}
+      SHA1: ${{ steps.hash.outputs.SHA1 }}
+
+    steps:
+      # 🔥 Replace actions/checkout with raw git
+      - name: Checkout repository
+        run: |
+          git clone https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }} .
+          git checkout ${{ github.ref_name }}
+
+      - name: Precompute event number and SOT version
+        id: get_version
+        run: |
+          EVENT_NUM=$(grep 'eventNumber:' eventData.txt | cut -d':' -f2 | tr -d ' ')
+          SOT_VERSION=$(grep 'SOT:' eventData.txt | awk '{print $2}')
+          NEXT_VERSION=$((SOT_VERSION + 1))
+          echo "NEXT_VERSION=$NEXT_VERSION" >> $GITHUB_OUTPUT
+          echo "EVENT_NUM=$EVENT_NUM" >> $GITHUB_OUTPUT
+
+      - name: Generate README.txt
+        run: |
+          echo "Hi, this pack is pretty much just MCC assets. Anything in the seleno folder is under my copyright (MIT License)." > SOTPack/README.txt
+          echo "We did use the christmas and halloween music from BMCC, so as per their copyright I am saying this here." >> SOTPack/README.txt
+          echo "" >> SOTPack/README.txt
+          echo "We do not claim ownership of any of the assets used, taking assets from this pack is allowed however do not claim it is your own." >> SOTPack/README.txt
+          echo "" >> SOTPack/README.txt
+          echo "This pack is for Siege Championships ${{ steps.get_version.outputs.EVENT_NUM }} as version #${{ steps.get_version.outputs.NEXT_VERSION }} of the SOT Pack" >> SOTPack/README.txt
+
+      - name: Create SOT ZIP
+        run: |
+          rm -f siege-SOT.zip
+          cd SOTPack
+          zip -r ../siege-SOT.zip . -x ".git/*" ".github/*"
+          cd ..
+
+      - name: Compute SHA-1 hash
+        id: hash
+        run: |
+          SHA1=$(sha1sum siege-SOT.zip | awk '{ print $1 }')
+          echo "SHA1=$SHA1" >> $GITHUB_OUTPUT
+
+      - name: Upload SOT ZIP to release
+        run: |
+          gh release delete SOTLatest --yes || true
+          gh release create SOTLatest siege-SOT.zip \
+            --title "SOTLatest" \
+            --notes "Automated build"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+  update-version-and-hash:
+    name: Update SOT Version and Hash
+    runs-on: ubuntu-latest
+    needs: build
+
+    steps:
+      # 🔥 Replace checkout again
+      - name: Checkout repository
+        run: |
+          git clone https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }} .
+          git checkout SOT
+
+      - name: Update SOT version and hash
+        run: |
+          git pull origin SOT
+          SHA1=${{ needs.build.outputs.SHA1 }}
+          NEXT_VERSION=${{ needs.build.outputs.NEXT_VERSION }}
+
+          sed -i "s/^[[:space:]]*SOT:.*/    SOT: $NEXT_VERSION/" eventData.txt
+          sed -i "s/^[[:space:]]*SOT_HASH:.*/    SOT_HASH: $SHA1/" eventData.txt
+
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          git add eventData.txt
+          git commit -m "Increment SOT version to $NEXT_VERSION and update hash"
+          git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }} SOT
