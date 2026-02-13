@@ -34,12 +34,12 @@ jobs:
 
       - name: Generate README.txt
         run: |
-          echo "Hi, this pack is pretty much just MCC assets. Anything in the seleno folder is under my copyright (MIT License)." > SOTPack/README.txt
-          echo "We did use the christmas and halloween music from BMCC, so as per their copyright I am saying this here." >> SOTPack/README.txt
-          echo "" >> SOTPack/README.txt
-          echo "We do not claim ownership of any of the assets used, taking assets from this pack is allowed however do not claim it is your own." >> SOTPack/README.txt
-          echo "" >> SOTPack/README.txt
-          echo "This pack is for Siege Championships ${{ steps.get_version.outputs.EVENT_NUM }} as version #${{ steps.get_version.outputs.NEXT_VERSION }} of the SOT Pack" >> SOTPack/README.txt
+          echo "Hi, this pack is pretty much just MCC assets. Anything in the seleno folder is under my copyright (MIT License)." > sotPack/README.txt
+          echo "We did use the christmas and halloween music from BMCC, so as per their copyright I am saying this here." >> sotPack/README.txt
+          echo "" >> sotPack/README.txt
+          echo "We do not claim ownership of any of the assets used, taking assets from this pack is allowed however do not claim it is your own." >> sotPack/README.txt
+          echo "" >> sotPack/README.txt
+          echo "This pack is for Siege Championships ${{ steps.get_version.outputs.EVENT_NUM }} as version #${{ steps.get_version.outputs.NEXT_VERSION }} of the SOT Pack" >> sotPack/README.txt
 
       - name: Create SOT ZIP
         run: |
