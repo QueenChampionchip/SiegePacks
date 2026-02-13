@@ -3,8 +3,7 @@ name: MAIN Pack
 on:
   workflow_dispatch:
 
-permissions:
-contents: write
+
 
 concurrency:
   group: main-pack
@@ -55,6 +54,8 @@ jobs:
 
       - name: Upload MAIN ZIP to release
         uses: softprops/action-gh-release@v1
+        permissions:
+          contents: write
         with:
           tag_name: mainLatest
           files: siege-main.zip
@@ -63,6 +64,8 @@ jobs:
 
       - name: Upload hash artifact
         uses: actions/upload-artifact@v4
+        permissions:
+          contents: write
         with:
           name: main-hash
           path: siege-main.hash
