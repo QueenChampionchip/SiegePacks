@@ -3,5 +3,5 @@ eventNumber: 2
 Packs:
 
   Main:
-    MAIN: 5
-    MAIN_HASH: 2731c08e971e4ace36ca2d3371db9673b1ec7a7b
+    MAIN: 6
+    MAIN_HASH: cb9c4945fd9736830d3fb3c33d4bbb4dca7d6e19
