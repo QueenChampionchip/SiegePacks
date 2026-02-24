@@ -8,38 +8,38 @@
   "sand_falling": {
     "category": "master",
     "sounds": [
-      "sot/sand_falling1",
-      "sot/sand_falling2"
+      "seleno:sot/sand_falling1",
+      "seleno:sot/sand_falling2"
     ]
   },
   "sandtimer_10sec": {
     "category": "master",
     "sounds": [
-      "sot/sandtimer_10sec"
+      "seleno:sot/sandtimer_10sec"
     ]
   },
   "sandtimer_20sec": {
     "category": "master",
     "sounds": [
-      "sot/sandtimer_20sec"
+      "seleno:sot/sandtimer_20sec"
     ]
   },
   "sandtimer_30sec": {
     "category": "master",
     "sounds": [
-      "sot/sandtimer_30sec"
+      "seleno:sot/sandtimer_30sec"
     ]
   },
   "lock_in": {
     "category": "master",
     "sounds": [
-      "sot/lock_in"
+      "seleno:sot/lock_in"
     ]
   },
   "tomb_open": {
     "sounds": [
       {
-        "name": "sot/tomb_open",
+        "name": "seleno:sot/tomb_open",
         "volume": 0.5
       }
     ]
@@ -47,23 +47,23 @@
   "door_wood": {
     "category": "master",
     "sounds": [
-      "sot/door_wood"
+      "seleno:sot/door_wood"
     ]
   },
   "door_vault": {
     "category": "master",
     "sounds": [
-      "sot/door_vault"
+      "seleno:sot/door_vault"
     ]
   },
   "teamvault_open": {
     "sounds": [
-      "sot/teamvault_open"
+      "seleno:sot/teamvault_open"
     ]
   },
   "vault_open": {
     "sounds": [
-      "sot/vault_open"
+      "seleno:sot/vault_open"
     ]
   },
   "coin_deposit": {
@@ -73,80 +73,80 @@
   },
   "button_push1": {
     "sounds": [
-      "sot/button_push1"
+      "seleno:sot/button_push1"
     ]
   },
   "button_push2": {
     "sounds": [
-      "sot/button_push2"
+      "seleno:sot/button_push2"
     ]
   },
   "sand_place": {
     "sounds": [
-      "sot/sand_place1",
-      "sot/sand_place2",
-      "sot/sand_place3"
+      "seleno:sot/sand_place1",
+      "seleno:sot/sand_place2",
+      "seleno:sot/sand_place3"
     ]
   },
   "sand_full": {
     "sounds": [
-      "sot/sand_full"
+      "seleno:sot/sand_full"
     ]
   },
   "key_pickup": {
     "sounds": [
-      "sot/key_pickup"
+      "seleno:sot/key_pickup"
     ]
   },
   "key_loop": {
     "sounds": [
-      "sot/key_loop"
+      "seleno:sot/key_loop"
     ]
   },
   "gate_open": {
     "sounds": [
-      "sot/gate_open"
+      "seleno:sot/gate_open"
     ]
   },
   "gate_close": {
     "sounds": [
-      "sot/gate_close"
+      "seleno:sot/gate_close"
     ]
   },
   "gold_drop": {
     "sounds": [
-      "sot/gold_drop1",
-      "sot/gold_drop2",
-      "sot/gold_drop3"
+      "seleno:sot/gold_drop1",
+      "seleno:sot/gold_drop2",
+      "seleno:sot/gold_drop3"
     ]
   },
   "statue_break": {
     "sounds": [
-      "sot/statue_break1",
-      "sot/statue_break2",
-      "sot/statue_break3"
+      "seleno:sot/statue_break1",
+      "seleno:sot/statue_break2",
+      "seleno:sot/statue_break3"
     ]
   },
   "key_pickup_gold": {
     "sounds": [
-      "sot/key_pickup_gold"
+      "seleno:sot/key_pickup_gold"
     ]
   },
   "key_pickup_vault": {
     "sounds": [
-      "sot/key_pickup_vault"
+      "seleno:sot/key_pickup_vault"
     ]
   },
   "puzzle_complete": {
     "category": "master",
     "sounds": [
-      "sot/puzzle_complete"
+      "seleno:sot/puzzle_complete"
     ]
   },
   "sand_sacrifice": {
     "category": "master",
     "sounds": [
-      "sot/sand_sacrifice"
+      "seleno:sot/sand_sacrifice"
     ]
   },
   "block.snow.break": {
@@ -154,7 +154,7 @@
     "sounds": [
       {
         "attenuation_distance": 4,
-        "name": "sot/stoneblock_break",
+        "name": "seleno:sot/stoneblock_break",
         "volume": 0.8
       }
     ]
@@ -162,7 +162,7 @@
   "music.sands_of_time": {
     "sounds": [
       {
-        "name": "sot/sands_of_time_main",
+        "name": "seleno:sot/sands_of_time_main",
         "stream": true,
         "volume": 0.7,
         "attenuation_distance": 0
