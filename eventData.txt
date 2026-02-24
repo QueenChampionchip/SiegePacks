@@ -6,6 +6,6 @@ Packs:
     MAIN: 7
     MAIN_HASH: e1bea8eba50e610ad418edc83a5fdf3e9b09f3ac
 
-    SOT: 
-    SOT: 
-    SOT_HASH: 44f3c14af90e514c8eabeb999b629cc7006aba8c
+    SOT: 1
+    SOT: 1
+    SOT_HASH: ca3e4ee516390d663bd2f9df1dd795c1662cc2d6
