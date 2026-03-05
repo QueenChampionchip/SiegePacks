@@ -295,6 +295,13 @@
     },
     {
       "type": "bitmap",
+      "file": "mcc:_fonts/ranks_short/admin.png",
+      "chars": [""],
+      "ascent": 7,
+      "height": 8
+    },
+    {
+      "type": "bitmap",
       "file": "unicode/emoji/e14.png",
       "ascent": 7,
       "height": 8,
