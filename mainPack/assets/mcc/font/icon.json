@@ -218,7 +218,7 @@
     },
     {
       "type": "bitmap",
-      "file": "mcc:_fonts/coin.png",
+      "file": "siege:custom/hub/chocolate_coin.png",
       "chars": [""],
       "ascent": 7,
       "height": 8
@@ -365,7 +365,7 @@
     },
     {
       "type": "bitmap",
-      "file": "siege:custom/hub/chocolate_coin.png",
+      "file": "mcc:_fonts/emojis/coins.png",
       "chars": [""],
       "ascent": 7,
       "height": 8
