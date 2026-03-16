@@ -24,6 +24,19 @@
   "tsf.tfa_maxtemp": {"sounds": ["seleno:tsf/tfa_maxtemp"]},
   "tsf.hard": {"sounds": ["seleno:tsf/hard"]},
 
+  "tsf.hatchdoor1": {"sounds": ["seleno:tsf/hatchdoor1"]},
+  "tsf.hatchdoor2": {"sounds": ["seleno:tsf/hatchdoor1"]},
+  "tsf.hatchdoor3": {"sounds": ["seleno:tsf/hatchdoor1"]},
+  "tsf.hatchdoor4": {"sounds": ["seleno:tsf/hatchdoor1"]},
+  "tsf.hatchdoor5": {"sounds": ["seleno:tsf/hatchdoor1"]},
+  "tsf.hatchdoor6": {"sounds": ["seleno:tsf/hatchdoor1"]},
+  "tsf.hatchdoor7": {"sounds": ["seleno:tsf/hatchdoor1"]},
+  "tsf.hatchdoor8": {"sounds": ["seleno:tsf/hatchdoor1"]},
+  "tsf.hatchdoor9": {"sounds": ["seleno:tsf/hatchdoor1"]},
+
+  "tsf.hatch_sequence": {"sounds": ["seleno:tsf/hatch_sequence"]},
+
+
   "tsf.death": {"sounds": ["seleno:tsf/death1", "seleno:tsf/death2", "seleno:tsf/death3"]}
 
 
