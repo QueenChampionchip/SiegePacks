@@ -523,6 +523,7 @@
   "music.auld_lang_syne": { "sounds": ["siege:music/auld_lang_syne"] },
   "music.bingo_but_fast": { "sounds": ["siege:music/bingo_but_fast"] },
   "music.walkout": { "sounds": ["siege:music/walkout"] },
+  "music.dynaball": { "sounds": ["siege:music/dynaball"] },
 
 
   "rsr.rocket_spleef_alert1": {
