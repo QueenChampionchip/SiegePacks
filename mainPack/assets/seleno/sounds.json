@@ -24,7 +24,7 @@
   "tsf.tfa_maxtemp": {"sounds": ["seleno:tsf/tfa_maxtemp"]},
   "tsf.hard": {"sounds": ["seleno:tsf/hard"]},
 
-  "tsf.death": {"sounds": ["seleno:tsf/death_1", "seleno:tsf/death_2", "seleno:tsf/death_3"]},
+  "tsf.death": {"sounds": ["seleno:tsf/death_1", "seleno:tsf/death_2", "seleno:tsf/death_3"]}
 
 
 }
