@@ -5,5 +5,26 @@
   "transgirl.dome": {"sounds": ["seleno:random_shit/trans_girl_dome"]},
 
   "gaygirl.intro": {"sounds": ["seleno:random_shit/gay_girl_intro"]},
-  "gaygirl.dome": {"sounds": ["seleno:random_shit/gay_girl_dome"]}
+  "gaygirl.dome": {"sounds": ["seleno:random_shit/gay_girl_dome"]},
+
+
+  "tsf.femvoicecomm_1": {"sounds": ["seleno:tsf/femvoicecomm_1"]},
+  "tsf.femvoicecomm_2": {"sounds": ["seleno:tsf/femvoicecomm_2"]},
+  "tsf.femvoicecomm_3": {"sounds": ["seleno:tsf/femvoicecomm_3"]},
+  "tsf.femvoicecomm_intro": {"sounds": ["seleno:tsf/femvoicecomm_intro"]},
+  "tsf.tfa_alphareach": {"sounds": ["seleno:tsf/tfa_alphareach"]},
+  "tsf.tfa_alphareach_solo": {"sounds": ["seleno:tsf/tfa_alphareach_solo"]},
+  "tsf.tfa_alphateleport": {"sounds": ["seleno:tsf/tfa_alphateleport"]},
+  "tsf.tfa_betareach": {"sounds": ["seleno:tsf/tfa_betareach"]},
+  "tsf.tfa_betareach_solo": {"sounds": ["seleno:tsf/tfa_betareach_solo"]},
+  "tsf.tfa_betateleport": {"sounds": ["seleno:tsf/tfa_betateleport"]},
+  "tsf.tfa_corenearby": {"sounds": ["seleno:tsf/tfa_corenearby"]},
+  "tsf.tfa_coreteleport": {"sounds": ["seleno:tsf/tfa_coreteleport"]},
+  "tsf.tfa_land": {"sounds": ["seleno:tsf/tfa_land"]},
+  "tsf.tfa_maxtemp": {"sounds": ["seleno:tsf/tfa_maxtemp"]},
+  "tsf.hard": {"sounds": ["seleno:tsf/hard"]},
+
+  "tsf.death": {"sounds": ["seleno:tsf/death_1", "seleno:tsf/death_2", "seleno:tsf/death_3"]},
+
+
 }
