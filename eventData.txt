@@ -3,8 +3,8 @@ eventNumber: 3
 Packs:
 
   Main:
-    MAIN: 18
-    MAIN_HASH: e9b4904bc5311b03a9ecdbb69e84cc694c2b35cb
+    MAIN: 19
+    MAIN_HASH: f174956b7799f6c2b00f81140b8629c097b4a743
 
     SOT: 1
     SOT: 1
