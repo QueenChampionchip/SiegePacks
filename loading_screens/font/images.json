@@ -1,0 +1,17 @@
+{
+  "providers": [
+    {
+      "type": "space",
+      "advances": {
+        " ": 4
+      }
+    },
+    {
+      "type": "bitmap",
+      "file": "mcc:_fonts/accept.png",
+      "chars": [""],
+      "ascent": 7,
+      "height": 8
+    }
+  ]
+}

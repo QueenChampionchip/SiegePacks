@@ -1,0 +1,64 @@
+{
+  "providers": [
+    {
+      "type": "space",
+      "advances": {
+        " ": 4
+      }
+    },
+    {
+      "type": "bitmap",
+      "file": "loading_images:screens/ar_1_0_0.png",
+      "ascent": 255,
+      "height": 256,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "loading_images:screens/ar_1_0_256.png",
+      "ascent": 175,
+      "height": 176,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "loading_images:screens/ar_1_256_0.png",
+      "ascent": 255,
+      "height": 256,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "loading_images:screens/ar_1_256_256.png",
+      "ascent": 175,
+      "height": 176,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "loading_images:screens/ar_1_512_0.png",
+      "ascent": 255,
+      "height": 256,
+      "chars": [
+        ""
+      ]
+    },
+    {
+      "type": "bitmap",
+      "file": "loading_images:screens/ar_1_512_256.png",
+      "ascent": 175,
+      "height": 176,
+      "chars": [
+        ""
+      ]
+    }
+  ]
+}

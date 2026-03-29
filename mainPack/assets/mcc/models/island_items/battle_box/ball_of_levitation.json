@@ -1,1 +1,1 @@
-{"model":{"type":"minecraft:model","model":"mcc:island_items/battle_box/ball_of_levitation"}}
+{"textures":{"layer0":"mcc:island_items/battle_box/ball_of_levitation"},"parent":"item/generated"}

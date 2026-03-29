@@ -1,1 +1,1 @@
-{"model":{"type":"minecraft:model","model":"mcc:island_items/battle_box/kit/scrapper"}}
+{"textures":{"layer0":"mcc:island_items/battle_box/kit/scrapper"},"parent":"item/generated"}

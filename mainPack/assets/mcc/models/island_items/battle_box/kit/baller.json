@@ -1,1 +1,1 @@
-{"model":{"type":"minecraft:model","model":"mcc:island_items/battle_box/kit/baller"}}
+{"textures":{"layer0":"mcc:island_items/battle_box/kit/baller"},"parent":"item/generated"}
