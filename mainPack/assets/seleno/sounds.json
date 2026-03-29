@@ -37,7 +37,10 @@
   "tsf.hatch_sequence": {"sounds": ["seleno:tsf/hatch_sequence"]},
 
 
-  "tsf.death": {"sounds": ["seleno:tsf/death1", "seleno:tsf/death2", "seleno:tsf/death3"]}
+  "tsf.death": {"sounds": ["seleno:tsf/death1", "seleno:tsf/death2", "seleno:tsf/death3"]},
+
+  "game_intros.sky_battle": {"sounds": ["seleno:game_intros/sky_battle"]},
+
 
 
 }
