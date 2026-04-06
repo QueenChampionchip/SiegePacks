@@ -232,6 +232,13 @@
     },
     {
       "type": "bitmap",
+      "file": "unicode/intro/railroadrush.png",
+      "ascent": 40,
+      "height": 80,
+      "chars": [""]
+    },
+    {
+      "type": "bitmap",
       "file": "unicode/emoji/e1.png",
       "ascent": 7,
       "height": 8,
