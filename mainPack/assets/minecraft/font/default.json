@@ -323,6 +323,13 @@
     },
     {
       "type": "bitmap",
+      "file": "mcc:_fonts/coin.png",
+      "chars": [""],
+      "ascent": 7,
+      "height": 8
+    },
+    {
+      "type": "bitmap",
       "file": "unicode/emoji/e17.png",
       "ascent": 7,
       "height": 8,
