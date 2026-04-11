@@ -659,6 +659,13 @@
     },
     {
       "type": "bitmap",
+      "file": "unicode/icons/rrr.png",
+      "ascent": 7,
+      "height": 8,
+      "chars": ["⵵"]
+    },
+    {
+      "type": "bitmap",
       "file": "unicode/icons/sb.png",
       "ascent": 7,
       "height": 8,
