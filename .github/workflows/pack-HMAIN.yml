@@ -45,13 +45,13 @@ jobs:
         run: |
           rm -f siege-hmain.zip
           cd halloweenMainPack
-          zip -r ../siege-HMAIN.zip . -x ".git/*" ".github/*"
+          zip -r ../siege-hmain.zip . -x ".git/*" ".github/*"
           cd ..
 
       - name: Compute SHA-1 hash
         id: hash
         run: |
-          SHA1=$(sha1sum siege-HMAIN.zip | awk '{ print $1 }')
+          SHA1=$(sha1sum siege-hmain.zip | awk '{ print $1 }')
           echo "SHA1=$SHA1" >> $GITHUB_OUTPUT
 
       - name: Upload HMAIN ZIP to release
