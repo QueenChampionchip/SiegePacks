@@ -1,0 +1,6 @@
+{
+    "parent": "item/custom/bow",
+    "textures": {
+        "layer0": "item/yellow_yaks/bow_pulling_4"
+    }
+}

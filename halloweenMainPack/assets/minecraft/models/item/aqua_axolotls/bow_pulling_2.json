@@ -1,0 +1,6 @@
+{
+    "parent": "item/custom/bow",
+    "textures": {
+        "layer0": "item/aqua_axolotls/bow_pulling_2"
+    }
+}

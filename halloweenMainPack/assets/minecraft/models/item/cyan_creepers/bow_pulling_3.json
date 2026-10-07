@@ -1,0 +1,6 @@
+{
+    "parent": "item/custom/bow",
+    "textures": {
+        "layer0": "item/cyan_creepers/bow_pulling_3"
+    }
+}

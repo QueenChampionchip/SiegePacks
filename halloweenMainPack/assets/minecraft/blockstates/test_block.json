@@ -1,0 +1,18 @@
+{
+  "variants": {
+
+    "mode=accept": {
+      "model": "siege:ar/turtle"
+    },
+    "mode=fail": {
+      "model": "siege:ar/turtle"
+    },
+    "mode=log": {
+      "model": "siege:ar/turtle"
+    },
+    "mode=start": {
+      "model": "siege:ar/turtle"
+    }
+
+  }
+}

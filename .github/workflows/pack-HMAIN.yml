@@ -1,0 +1,92 @@
+name: HMAIN Pack
+
+on:
+  workflow_dispatch:
+
+concurrency:
+  group: HMAIN-pack
+  cancel-in-progress: true
+
+jobs:
+  build:
+    name: Build HMAIN Pack
+    runs-on: ubuntu-latest
+    outputs:
+      NEXT_VERSION: ${{ steps.get_version.outputs.NEXT_VERSION }}
+      EVENT_NUM: ${{ steps.get_version.outputs.EVENT_NUM }}
+      SHA1: ${{ steps.hash.outputs.SHA1 }}
+
+    steps:
+      # 🔥 Replace actions/checkout with raw git
+      - name: Checkout repository
+        run: |
+          git clone https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }} .
+          git checkout ${{ github.ref_name }}
+
+      - name: Precompute event number and HMAIN version
+        id: get_version
+        run: |
+          EVENT_NUM=$(grep 'eventNumber:' eventData.txt | cut -d':' -f2 | tr -d ' ')
+          HMAIN_VERSION=$(grep 'HMAIN:' eventData.txt | awk '{print $2}')
+          NEXT_VERSION=$((HMAIN_VERSION + 1))
+          echo "NEXT_VERSION=$NEXT_VERSION" >> $GITHUB_OUTPUT
+          echo "EVENT_NUM=$EVENT_NUM" >> $GITHUB_OUTPUT
+
+      - name: Generate README.txt
+        run: |
+          echo "Hi, this pack is pretty much just MCC assets. Anything in the seleno folder is under my copyright (MIT License)." > halloweenHMAINPack/README.txt
+          echo "We did use the christmas and halloween music from BMCC, so as per their copyright I am saying this here." >> halloweenHMAINPack/README.txt
+          echo "" >> halloweenHMAINPack/README.txt
+          echo "We do not claim ownership of any of the assets used, taking assets from this pack is allowed however do not claim it is your own." >> halloweenHMAINPack/README.txt
+          echo "" >> halloweenHMAINPack/README.txt
+          echo "This pack is for Siege Championships ${{ steps.get_version.outputs.EVENT_NUM }} as version #${{ steps.get_version.outputs.NEXT_VERSION }} of the HMAIN Pack" >> halloweenHMAINPack/README.txt
+
+      - name: Create HMAIN ZIP
+        run: |
+          rm -f siege-hmain.zip
+          cd halloweenHMAINPack
+          zip -r ../siege-HMAIN.zip . -x ".git/*" ".github/*"
+          cd ..
+
+      - name: Compute SHA-1 hash
+        id: hash
+        run: |
+          SHA1=$(sha1sum siege-HMAIN.zip | awk '{ print $1 }')
+          echo "SHA1=$SHA1" >> $GITHUB_OUTPUT
+
+      - name: Upload HMAIN ZIP to release
+        run: |
+          gh release delete halloweenHMAINLatest --yes || true
+          gh release create halloweenHMAINLatest siege-hmain.zip \
+            --title "HMAINLatest" \
+            --notes "Automated build"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+  update-version-and-hash:
+    name: Update HMAIN Version and Hash
+    runs-on: ubuntu-latest
+    needs: build
+
+    steps:
+      # 🔥 Replace checkout again
+      - name: Checkout repository
+        run: |
+          git clone https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }} .
+          git checkout HMAIN
+
+      - name: Update HMAIN version and hash
+        run: |
+          git pull origin HMAIN
+          SHA1=${{ needs.build.outputs.SHA1 }}
+          NEXT_VERSION=${{ needs.build.outputs.NEXT_VERSION }}
+
+          sed -i "s/^[[:space:]]*HMAIN:.*/    HMAIN: $NEXT_VERSION/" eventData.txt
+          sed -i "s/^[[:space:]]*HMAIN_HASH:.*/    HMAIN_HASH: $SHA1/" eventData.txt
+
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          git add eventData.txt
+          git commit -m "Increment HMAIN version to $NEXT_VERSION and update hash"
+          git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }} HMAIN
