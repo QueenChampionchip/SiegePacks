@@ -1,0 +1,724 @@
+{
+    "model": {
+        "type": "range_dispatch",
+        "property": "custom_model_data",
+        "fallback": {
+            "type": "minecraft:condition",
+            "property": "minecraft:using_item",
+            "on_false": {
+                "type": "minecraft:model",
+                "model": "minecraft:item/bow"
+            },
+            "on_true": {
+                "type": "minecraft:range_dispatch",
+                "property": "minecraft:use_duration",
+                "scale": 0.05,
+                "fallback": {
+                    "type": "minecraft:model",
+                    "model": "minecraft:item/bow_pulling_0"
+                },
+                "entries": [
+                    {
+                        "threshold": 0.65,
+                        "model": {
+                            "type": "minecraft:model",
+                            "model": "minecraft:item/bow_pulling_1"
+                        }
+                    },
+                    {
+                        "threshold": 0.9,
+                        "model": {
+                            "type": "minecraft:model",
+                            "model": "minecraft:item/bow_pulling_2"
+                        }
+                    }
+                ]
+            }
+        },
+        "entries": [
+            {
+                "threshold": 1,
+                "model": {
+                    "type": "minecraft:condition",
+                    "property": "minecraft:using_item",
+                    "on_false": {
+                        "type": "minecraft:model",
+                        "model": "item/frost_bow/frost_bow"
+                    },
+                    "on_true": {
+                        "type": "minecraft:range_dispatch",
+                        "property": "minecraft:use_duration",
+                        "scale": 0.05,
+                        "fallback": {
+                            "type": "minecraft:model",
+                            "model": "item/frost_bow/frost_bow"
+                        },
+                        "entries": [
+                            {
+                                "threshold": 0.0,
+                                "model": {
+                                    "type": "minecraft:model",
+                                    "model": "item/frost_bow/frost_bow_pulling_0"
+                                }
+                            },
+                            {
+                                "threshold": 0.65,
+                                "model": {
+                                    "type": "minecraft:model",
+                                    "model": "item/frost_bow/frost_bow_pulling_1"
+                                }
+                            },
+                            {
+                                "threshold": 0.9,
+                                "model": {
+                                    "type": "minecraft:model",
+                                    "model": "item/frost_bow/frost_bow_pulling_2"
+                                }
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                "threshold": 2,
+                "model": {
+                    "type": "minecraft:condition",
+                    "property": "minecraft:using_item",
+                    "on_false": {
+                        "type": "minecraft:model",
+                        "model": "item/blue_bats/bow"
+                    },
+                    "on_true": {
+                        "type": "minecraft:range_dispatch",
+                        "property": "minecraft:use_duration",
+                        "scale": 0.05,
+                        "fallback": {
+                            "type": "minecraft:model",
+                            "model": "item/blue_bats/bow"
+                        },
+                        "entries": [
+                            {
+                                "threshold": 0.0,
+                                "model": {
+                                    "type": "minecraft:model",
+                                    "model": "item/blue_bats/bow_pulling_0"
+                                }
+                            },
+                            {
+                                "threshold": 0.2,
+                                "model": {
+                                    "type": "minecraft:model",
+                                    "model": "item/blue_bats/bow_pulling_1"
+                                }
+                            },
+                            {
+                                "threshold": 0.4,
+                                "model": {
+                                    "type": "minecraft:model",
+                                    "model": "item/blue_bats/bow_pulling_2"
+                                }
+                            },
+                            {
+                                "threshold": 0.6,
+                                "model": {
+                                    "type": "minecraft:model",
+                                    "model": "item/blue_bats/bow_pulling_3"
+                                }
+                            },
+                            {
+                                "threshold": 0.8,
+                                "model": {
+                                    "type": "minecraft:model",
+                                    "model": "item/blue_bats/bow_pulling_4"
+                                }
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                "threshold": 3,
+                "model": {
+                    "type": "minecraft:condition",
+                    "property": "minecraft:using_item",
+                    "on_false": {
+                        "type": "minecraft:model",
+                        "model": "item/cyan_creepers/bow"
+                    },
+                    "on_true": {
+                        "type": "minecraft:range_dispatch",
+                        "property": "minecraft:use_duration",
+                        "scale": 0.05,
+                        "fallback": {
+                            "type": "minecraft:model",
+                            "model": "item/cyan_creepers/bow"
+                        },
+                        "entries": [
+                            {
+                                "threshold": 0.0,
+                                "model": {
+                                    "type": "minecraft:model",
+                                    "model": "item/cyan_creepers/bow_pulling_0"
+                                }
+                            },
+                            {
+                                "threshold": 0.2,
+                                "model": {
+                                    "type": "minecraft:model",
+                                    "model": "item/cyan_creepers/bow_pulling_1"
+                                }
+                            },
+                            {
+                                "threshold": 0.4,
+                                "model": {
+                                    "type": "minecraft:model",
+                                    "model": "item/cyan_creepers/bow_pulling_2"
+                                }
+                            },
+                            {
+                                "threshold": 0.6,
+                                "model": {
+                                    "type": "minecraft:model",
+                                    "model": "item/cyan_creepers/bow_pulling_3"
+                                }
+                            },
+                            {
+                                "threshold": 0.8,
+                                "model": {
+                                    "type": "minecraft:model",
+                                    "model": "item/cyan_creepers/bow_pulling_4"
+                                }
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                "threshold": 4,
+                "model": {
+                    "type": "minecraft:condition",
+                    "property": "minecraft:using_item",
+                    "on_false": {
+                        "type": "minecraft:model",
+                        "model": "item/lime_llamas/bow"
+                    },
+                    "on_true": {
+                        "type": "minecraft:range_dispatch",
+                        "property": "minecraft:use_duration",
+                        "scale": 0.05,
+                        "fallback": {
+                            "type": "minecraft:model",
+                            "model": "item/lime_llamas/bow"
+                        },
+                        "entries": [
+                            {
+                                "threshold": 0.0,
+                                "model": {
+                                    "type": "minecraft:model",
+                                    "model": "item/lime_llamas/bow_pulling_0"
+                                }
+                            },
+                            {
+                                "threshold": 0.2,
+                                "model": {
+                                    "type": "minecraft:model",
+                                    "model": "item/lime_llamas/bow_pulling_1"
+                                }
+                            },
+                            {
+                                "threshold": 0.4,
+                                "model": {
+                                    "type": "minecraft:model",
+                                    "model": "item/lime_llamas/bow_pulling_2"
+                                }
+                            },
+                            {
+                                "threshold": 0.6,
+                                "model": {
+                                    "type": "minecraft:model",
+                                    "model": "item/lime_llamas/bow_pulling_3"
+                                }
+                            },
+                            {
+                                "threshold": 0.8,
+                                "model": {
+                                    "type": "minecraft:model",
+                                    "model": "item/lime_llamas/bow_pulling_4"
+                                }
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                "threshold": 5,
+                "model": {
+                    "type": "minecraft:condition",
+                    "property": "minecraft:using_item",
+                    "on_false": {
+                        "type": "minecraft:model",
+                        "model": "item/orange_ocelots/bow"
+                    },
+                    "on_true": {
+                        "type": "minecraft:range_dispatch",
+                        "property": "minecraft:use_duration",
+                        "scale": 0.05,
+                        "fallback": {
+                            "type": "minecraft:model",
+                            "model": "item/orange_ocelots/bow"
+                        },
+                        "entries": [
+                            {
+                                "threshold": 0.0,
+                                "model": {
+                                    "type": "minecraft:model",
+                                    "model": "item/orange_ocelots/bow_pulling_0"
+                                }
+                            },
+                            {
+                                "threshold": 0.2,
+                                "model": {
+                                    "type": "minecraft:model",
+                                    "model": "item/orange_ocelots/bow_pulling_1"
+                                }
+                            },
+                            {
+                                "threshold": 0.4,
+                                "model": {
+                                    "type": "minecraft:model",
+                                    "model": "item/orange_ocelots/bow_pulling_2"
+                                }
+                            },
+                            {
+                                "threshold": 0.6,
+                                "model": {
+                                    "type": "minecraft:model",
+                                    "model": "item/orange_ocelots/bow_pulling_3"
+                                }
+                            },
+                            {
+                                "threshold": 0.8,
+                                "model": {
+                                    "type": "minecraft:model",
+                                    "model": "item/orange_ocelots/bow_pulling_4"
+                                }
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                "threshold": 6,
+                "model": {
+                    "type": "minecraft:condition",
+                    "property": "minecraft:using_item",
+                    "on_false": {
+                        "type": "minecraft:model",
+                        "model": "item/pink_parrots/bow"
+                    },
+                    "on_true": {
+                        "type": "minecraft:range_dispatch",
+                        "property": "minecraft:use_duration",
+                        "scale": 0.05,
+                        "fallback": {
+                            "type": "minecraft:model",
+                            "model": "item/pink_parrots/bow"
+                        },
+                        "entries": [
+                            {
+                                "threshold": 0.0,
+                                "model": {
+                                    "type": "minecraft:model",
+                                    "model": "item/pink_parrots/bow_pulling_0"
+                                }
+                            },
+                            {
+                                "threshold": 0.2,
+                                "model": {
+                                    "type": "minecraft:model",
+                                    "model": "item/pink_parrots/bow_pulling_1"
+                                }
+                            },
+                            {
+                                "threshold": 0.4,
+                                "model": {
+                                    "type": "minecraft:model",
+                                    "model": "item/pink_parrots/bow_pulling_2"
+                                }
+                            },
+                            {
+                                "threshold": 0.6,
+                                "model": {
+                                    "type": "minecraft:model",
+                                    "model": "item/pink_parrots/bow_pulling_3"
+                                }
+                            },
+                            {
+                                "threshold": 0.8,
+                                "model": {
+                                    "type": "minecraft:model",
+                                    "model": "item/pink_parrots/bow_pulling_4"
+                                }
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                "threshold": 7,
+                "model": {
+                    "type": "minecraft:condition",
+                    "property": "minecraft:using_item",
+                    "on_false": {
+                        "type": "minecraft:model",
+                        "model": "item/purple_pandas/bow"
+                    },
+                    "on_true": {
+                        "type": "minecraft:range_dispatch",
+                        "property": "minecraft:use_duration",
+                        "scale": 0.05,
+                        "fallback": {
+                            "type": "minecraft:model",
+                            "model": "item/purple_pandas/bow"
+                        },
+                        "entries": [
+                            {
+                                "threshold": 0.0,
+                                "model": {
+                                    "type": "minecraft:model",
+                                    "model": "item/purple_pandas/bow_pulling_0"
+                                }
+                            },
+                            {
+                                "threshold": 0.2,
+                                "model": {
+                                    "type": "minecraft:model",
+                                    "model": "item/purple_pandas/bow_pulling_1"
+                                }
+                            },
+                            {
+                                "threshold": 0.4,
+                                "model": {
+                                    "type": "minecraft:model",
+                                    "model": "item/purple_pandas/bow_pulling_2"
+                                }
+                            },
+                            {
+                                "threshold": 0.6,
+                                "model": {
+                                    "type": "minecraft:model",
+                                    "model": "item/purple_pandas/bow_pulling_3"
+                                }
+                            },
+                            {
+                                "threshold": 0.8,
+                                "model": {
+                                    "type": "minecraft:model",
+                                    "model": "item/purple_pandas/bow_pulling_4"
+                                }
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                "threshold": 8,
+                "model": {
+                    "type": "minecraft:condition",
+                    "property": "minecraft:using_item",
+                    "on_false": {
+                        "type": "minecraft:model",
+                        "model": "item/red_rabbits/bow"
+                    },
+                    "on_true": {
+                        "type": "minecraft:range_dispatch",
+                        "property": "minecraft:use_duration",
+                        "scale": 0.05,
+                        "fallback": {
+                            "type": "minecraft:model",
+                            "model": "item/red_rabbits/bow"
+                        },
+                        "entries": [
+                            {
+                                "threshold": 0.0,
+                                "model": {
+                                    "type": "minecraft:model",
+                                    "model": "item/red_rabbits/bow_pulling_0"
+                                }
+                            },
+                            {
+                                "threshold": 0.2,
+                                "model": {
+                                    "type": "minecraft:model",
+                                    "model": "item/red_rabbits/bow_pulling_1"
+                                }
+                            },
+                            {
+                                "threshold": 0.4,
+                                "model": {
+                                    "type": "minecraft:model",
+                                    "model": "item/red_rabbits/bow_pulling_2"
+                                }
+                            },
+                            {
+                                "threshold": 0.6,
+                                "model": {
+                                    "type": "minecraft:model",
+                                    "model": "item/red_rabbits/bow_pulling_3"
+                                }
+                            },
+                            {
+                                "threshold": 0.8,
+                                "model": {
+                                    "type": "minecraft:model",
+                                    "model": "item/red_rabbits/bow_pulling_4"
+                                }
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                "threshold": 9,
+                "model": {
+                    "type": "minecraft:condition",
+                    "property": "minecraft:using_item",
+                    "on_false": {
+                        "type": "minecraft:model",
+                        "model": "item/yellow_yaks/bow"
+                    },
+                    "on_true": {
+                        "type": "minecraft:range_dispatch",
+                        "property": "minecraft:use_duration",
+                        "scale": 0.05,
+                        "fallback": {
+                            "type": "minecraft:model",
+                            "model": "item/yellow_yaks/bow"
+                        },
+                        "entries": [
+                            {
+                                "threshold": 0.0,
+                                "model": {
+                                    "type": "minecraft:model",
+                                    "model": "item/yellow_yaks/bow_pulling_0"
+                                }
+                            },
+                            {
+                                "threshold": 0.2,
+                                "model": {
+                                    "type": "minecraft:model",
+                                    "model": "item/yellow_yaks/bow_pulling_1"
+                                }
+                            },
+                            {
+                                "threshold": 0.4,
+                                "model": {
+                                    "type": "minecraft:model",
+                                    "model": "item/yellow_yaks/bow_pulling_2"
+                                }
+                            },
+                            {
+                                "threshold": 0.6,
+                                "model": {
+                                    "type": "minecraft:model",
+                                    "model": "item/yellow_yaks/bow_pulling_3"
+                                }
+                            },
+                            {
+                                "threshold": 0.8,
+                                "model": {
+                                    "type": "minecraft:model",
+                                    "model": "item/yellow_yaks/bow_pulling_4"
+                                }
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                "threshold": 10,
+                "model": {
+                    "type": "minecraft:condition",
+                    "property": "minecraft:using_item",
+                    "on_false": {
+                        "type": "minecraft:model",
+                        "model": "item/green_guardians/bow"
+                    },
+                    "on_true": {
+                        "type": "minecraft:range_dispatch",
+                        "property": "minecraft:use_duration",
+                        "scale": 0.05,
+                        "fallback": {
+                            "type": "minecraft:model",
+                            "model": "item/green_guardians/bow"
+                        },
+                        "entries": [
+                            {
+                                "threshold": 0.0,
+                                "model": {
+                                    "type": "minecraft:model",
+                                    "model": "item/green_guardians/bow_pulling_0"
+                                }
+                            },
+                            {
+                                "threshold": 0.2,
+                                "model": {
+                                    "type": "minecraft:model",
+                                    "model": "item/green_guardians/bow_pulling_1"
+                                }
+                            },
+                            {
+                                "threshold": 0.4,
+                                "model": {
+                                    "type": "minecraft:model",
+                                    "model": "item/green_guardians/bow_pulling_2"
+                                }
+                            },
+                            {
+                                "threshold": 0.6,
+                                "model": {
+                                    "type": "minecraft:model",
+                                    "model": "item/green_guardians/bow_pulling_3"
+                                }
+                            },
+                            {
+                                "threshold": 0.8,
+                                "model": {
+                                    "type": "minecraft:model",
+                                    "model": "item/green_guardians/bow_pulling_4"
+                                }
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                "threshold": 11,
+                "model": {
+                    "type": "minecraft:condition",
+                    "property": "minecraft:using_item",
+                    "on_false": {
+                        "type": "minecraft:model",
+                        "model": "item/aqua_axolotls/bow"
+                    },
+                    "on_true": {
+                        "type": "minecraft:range_dispatch",
+                        "property": "minecraft:use_duration",
+                        "scale": 0.05,
+                        "fallback": {
+                            "type": "minecraft:model",
+                            "model": "item/aqua_axolotls/bow"
+                        },
+                        "entries": [
+                            {
+                                "threshold": 0.0,
+                                "model": {
+                                    "type": "minecraft:model",
+                                    "model": "item/aqua_axolotls/bow_pulling_0"
+                                }
+                            },
+                            {
+                                "threshold": 0.2,
+                                "model": {
+                                    "type": "minecraft:model",
+                                    "model": "item/aqua_axolotls/bow_pulling_1"
+                                }
+                            },
+                            {
+                                "threshold": 0.4,
+                                "model": {
+                                    "type": "minecraft:model",
+                                    "model": "item/aqua_axolotls/bow_pulling_2"
+                                }
+                            },
+                            {
+                                "threshold": 0.6,
+                                "model": {
+                                    "type": "minecraft:model",
+                                    "model": "item/aqua_axolotls/bow_pulling_3"
+                                }
+                            },
+                            {
+                                "threshold": 0.8,
+                                "model": {
+                                    "type": "minecraft:model",
+                                    "model": "item/aqua_axolotls/bow_pulling_4"
+                                }
+                            }
+                        ]
+                    }
+                }
+            }
+        ]
+    },
+    "display": {
+        "thirdperson_righthand": {
+            "rotation": [
+                -80,
+                260,
+                -40
+            ],
+            "translation": [
+                -1,
+                -2,
+                2.5
+            ],
+            "scale": [
+                0.9,
+                0.9,
+                0.9
+            ]
+        },
+        "thirdperson_lefthand": {
+            "rotation": [
+                -80,
+                -280,
+                40
+            ],
+            "translation": [
+                -1,
+                -2,
+                2.5
+            ],
+            "scale": [
+                0.9,
+                0.9,
+                0.9
+            ]
+        },
+        "firstperson_righthand": {
+            "rotation": [
+                0,
+                -90,
+                25
+            ],
+            "translation": [
+                1.13,
+                3.2,
+                1.13
+            ],
+            "scale": [
+                0.68,
+                0.68,
+                0.68
+            ]
+        },
+        "firstperson_lefthand": {
+            "rotation": [
+                0,
+                90,
+                -25
+            ],
+            "translation": [
+                1.13,
+                3.2,
+                1.13
+            ],
+            "scale": [
+                0.68,
+                0.68,
+                0.68
+            ]
+        }
+    }
+}
