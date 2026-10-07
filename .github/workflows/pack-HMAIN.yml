@@ -73,11 +73,11 @@ jobs:
       - name: Checkout repository
         run: |
           git clone https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }} .
-          git checkout HMAIN
+          git checkout main
 
       - name: Update HMAIN version and hash
         run: |
-          git pull origin HMAIN
+          git pull origin main
           SHA1=${{ needs.build.outputs.SHA1 }}
           NEXT_VERSION=${{ needs.build.outputs.NEXT_VERSION }}
 
@@ -89,4 +89,4 @@ jobs:
 
           git add eventData.txt
           git commit -m "Increment HMAIN version to $NEXT_VERSION and update hash"
-          git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }} HMAIN
+          git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }} main
