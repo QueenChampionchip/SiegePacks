@@ -34,17 +34,17 @@ jobs:
 
       - name: Generate README.txt
         run: |
-          echo "Hi, this pack is pretty much just MCC assets. Anything in the seleno folder is under my copyright (MIT License)." > halloweenHMAINPack/README.txt
-          echo "We did use the christmas and halloween music from BMCC, so as per their copyright I am saying this here." >> halloweenHMAINPack/README.txt
-          echo "" >> halloweenHMAINPack/README.txt
-          echo "We do not claim ownership of any of the assets used, taking assets from this pack is allowed however do not claim it is your own." >> halloweenHMAINPack/README.txt
-          echo "" >> halloweenHMAINPack/README.txt
-          echo "This pack is for Siege Championships ${{ steps.get_version.outputs.EVENT_NUM }} as version #${{ steps.get_version.outputs.NEXT_VERSION }} of the HMAIN Pack" >> halloweenHMAINPack/README.txt
+          echo "Hi, this pack is pretty much just MCC assets. Anything in the seleno folder is under my copyright (MIT License)." > halloweenMainPack/README.txt
+          echo "We did use the christmas and halloween music from BMCC, so as per their copyright I am saying this here." >> halloweenMainPack/README.txt
+          echo "" >> halloweenMainPack/README.txt
+          echo "We do not claim ownership of any of the assets used, taking assets from this pack is allowed however do not claim it is your own." >> halloweenMainPack/README.txt
+          echo "" >> halloweenMainPack/README.txt
+          echo "This pack is for Siege Championships ${{ steps.get_version.outputs.EVENT_NUM }} as version #${{ steps.get_version.outputs.NEXT_VERSION }} of the HMAIN Pack" >> halloweenMainPack/README.txt
 
       - name: Create HMAIN ZIP
         run: |
           rm -f siege-hmain.zip
-          cd halloweenHMAINPack
+          cd halloweenMainPack
           zip -r ../siege-HMAIN.zip . -x ".git/*" ".github/*"
           cd ..
 
@@ -56,8 +56,8 @@ jobs:
 
       - name: Upload HMAIN ZIP to release
         run: |
-          gh release delete halloweenHMAINLatest --yes || true
-          gh release create halloweenHMAINLatest siege-hmain.zip \
+          gh release delete halloweenMainLatest --yes || true
+          gh release create halloweenMainLatest siege-hmain.zip \
             --title "HMAINLatest" \
             --notes "Automated build"
         env:
