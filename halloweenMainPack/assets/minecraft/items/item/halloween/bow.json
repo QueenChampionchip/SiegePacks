@@ -1,7 +1,7 @@
 {
     "model":  {
                   "on_false":  {
-                                   "model":  "minecraft:item/yellow_yaks/bow",
+                                   "model":  "minecraft:item/halloween/bow",
                                    "type":  "minecraft:model"
                                },
                   "property":  "minecraft:using_item",
@@ -9,35 +9,35 @@
                                   "entries":  [
                                                   {
                                                       "model":  {
-                                                                    "model":  "minecraft:item/yellow_yaks/bow_pulling_0",
+                                                                    "model":  "minecraft:item/halloween/bow_pulling_0",
                                                                     "type":  "minecraft:model"
                                                                 },
                                                       "threshold":  0
                                                   },
                                                   {
                                                       "model":  {
-                                                                    "model":  "minecraft:item/yellow_yaks/bow_pulling_1",
+                                                                    "model":  "minecraft:item/halloween/bow_pulling_1",
                                                                     "type":  "minecraft:model"
                                                                 },
                                                       "threshold":  5
                                                   },
                                                   {
                                                       "model":  {
-                                                                    "model":  "minecraft:item/yellow_yaks/bow_pulling_2",
+                                                                    "model":  "minecraft:item/halloween/bow_pulling_2",
                                                                     "type":  "minecraft:model"
                                                                 },
                                                       "threshold":  10
                                                   },
                                                   {
                                                       "model":  {
-                                                                    "model":  "minecraft:item/yellow_yaks/bow_pulling_3",
+                                                                    "model":  "minecraft:item/halloween/bow_pulling_3",
                                                                     "type":  "minecraft:model"
                                                                 },
                                                       "threshold":  15
                                                   },
                                                   {
                                                       "model":  {
-                                                                    "model":  "minecraft:item/yellow_yaks/bow_pulling_4",
+                                                                    "model":  "minecraft:item/halloween/bow_pulling_4",
                                                                     "type":  "minecraft:model"
                                                                 },
                                                       "threshold":  20

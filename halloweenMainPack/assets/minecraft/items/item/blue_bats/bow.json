@@ -1,6 +1,51 @@
 {
-    "model": {
-        "type": "model",
-        "model": "minecraft:item/blue_bats/bow"
-    }
+    "model":  {
+                  "on_false":  {
+                                   "model":  "minecraft:item/blue_bats/bow",
+                                   "type":  "minecraft:model"
+                               },
+                  "property":  "minecraft:using_item",
+                  "on_true":  {
+                                  "entries":  [
+                                                  {
+                                                      "model":  {
+                                                                    "model":  "minecraft:item/blue_bats/bow_pulling_0",
+                                                                    "type":  "minecraft:model"
+                                                                },
+                                                      "threshold":  0
+                                                  },
+                                                  {
+                                                      "model":  {
+                                                                    "model":  "minecraft:item/blue_bats/bow_pulling_1",
+                                                                    "type":  "minecraft:model"
+                                                                },
+                                                      "threshold":  5
+                                                  },
+                                                  {
+                                                      "model":  {
+                                                                    "model":  "minecraft:item/blue_bats/bow_pulling_2",
+                                                                    "type":  "minecraft:model"
+                                                                },
+                                                      "threshold":  10
+                                                  },
+                                                  {
+                                                      "model":  {
+                                                                    "model":  "minecraft:item/blue_bats/bow_pulling_3",
+                                                                    "type":  "minecraft:model"
+                                                                },
+                                                      "threshold":  15
+                                                  },
+                                                  {
+                                                      "model":  {
+                                                                    "model":  "minecraft:item/blue_bats/bow_pulling_4",
+                                                                    "type":  "minecraft:model"
+                                                                },
+                                                      "threshold":  20
+                                                  }
+                                              ],
+                                  "property":  "minecraft:use_duration",
+                                  "type":  "minecraft:range_dispatch"
+                              },
+                  "type":  "minecraft:condition"
+              }
 }
