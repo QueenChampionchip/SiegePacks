@@ -39,8 +39,67 @@
 
   "tsf.death": {"sounds": ["seleno:tsf/death1", "seleno:tsf/death2", "seleno:tsf/death3"]},
 
-  "game_intros.sky_battle": {"sounds": ["seleno:game_intros/sky_battle"]}
+  "game_intros.sky_battle": {"sounds": ["seleno:game_intros/sky_battle"]},
 
-
+  "witchbolt.charge1": {
+    "sounds": [
+      "seleno:witchbolt/wand_charge1"
+    ]
+  },
+  "witchbolt.charge2": {
+    "sounds": [
+      "seleno:witchbolt/wand_charge2"
+    ]
+  },
+  "witchbolt.charge3": {
+    "sounds": [
+      "seleno:witchbolt/wand_charge3"
+    ]
+  },
+  "witchbolt.charge4": {
+    "sounds": [
+      "seleno:witchbolt/wand_charge4"
+    ]
+  },
+  "witchbolt.shot1": {
+    "sounds": [
+      "seleno:witchbolt/wand_shot1"
+    ]
+  },
+  "witchbolt.shot2": {
+    "sounds": [
+      "seleno:witchbolt/wand_shot2"
+    ]
+  },
+  "witchbolt.shot3": {
+    "sounds": [
+      "seleno:witchbolt/wand_shot3"
+    ]
+  },
+  "witchbolt.shot4": {
+    "sounds": [
+      "seleno:witchbolt/wand_shot4"
+    ]
+  },
+  "witchbolt.richochet1": {
+    "sounds": [
+      "seleno:witchbolt/wand_richochet1"
+    ]
+  },
+  "witchbolt.richochet2": {
+    "sounds": [
+      "seleno:witchbolt/wand_richochet2"
+    ]
+  },
+  "witchbolt.richochet3": {
+    "sounds": [
+      "seleno:witchbolt/wand_richochet3"
+    ]
+  },
+  "witchbolt.richochet4": {
+    "sounds": [
+      "seleno:witchbolt/wand_richochet4"
+    ]
+  }
 
 }
